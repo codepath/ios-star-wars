@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Screen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BaseScreen" customModule="Delegates_Protocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="aEL-xC-8YP">
+                                <rect key="frame" x="25" y="122" width="325" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aEL-xC-8YP" secondAttribute="height" multiplier="16:9" id="bFh-9T-6Lh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQ7-jf-iNe">
+                                <rect key="frame" x="57" y="550" width="260" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OvI-3z-xym"/>
+                                    <constraint firstAttribute="width" constant="260" id="z9J-D3-zdC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                <color key="tintColor" red="0.97812938690185547" green="0.890300452709198" blue="0.31347513198852539" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Choose a Side">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.74510893489999996" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVc-SA-AJF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQL-UX-coT">
+                                <rect key="frame" x="20" y="320" width="335" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="ZZa-ec-RPK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oQ7-jf-iNe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GMa-BF-Sw6"/>
+                            <constraint firstItem="aEL-xC-8YP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="Quk-eM-pZh"/>
+                            <constraint firstAttribute="trailing" secondItem="YQL-UX-coT" secondAttribute="trailing" constant="20" id="RdV-sd-4Fa"/>
+                            <constraint firstItem="YQL-UX-coT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="YKa-He-Ivd"/>
+                            <constraint firstItem="YQL-UX-coT" firstAttribute="top" secondItem="aEL-xC-8YP" secondAttribute="bottom" constant="15" id="nhW-KJ-FEe"/>
+                            <constraint firstAttribute="trailing" secondItem="aEL-xC-8YP" secondAttribute="trailing" constant="25" id="pRd-Zn-3YE"/>
+                            <constraint firstItem="aEL-xC-8YP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-120" id="s0B-ME-L28"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oQ7-jf-iNe" secondAttribute="bottom" constant="67" id="wtb-Rx-l3D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="oQ7-jf-iNe" id="yhj-fR-dXh"/>
+                        <outlet property="mainImageView" destination="aEL-xC-8YP" id="rWh-Yn-EHI"/>
+                        <outlet property="nameLabel" destination="YQL-UX-coT" id="seq-dz-3dE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Selection Screen-->
+        <scene sceneID="uXc-FZ-6ed">
+            <objects>
+                <viewController storyboardIdentifier="SelectionScreen" id="XtL-ue-j9W" customClass="SelectionScreen" customModule="Delegates_Protocols" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3fp-au-dlL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pyo-cW-CKF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CTl-je-TtQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Side" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFt-Bv-Mil">
+                                <rect key="frame" x="59" y="50" width="256" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="0qz-z9-DIL"/>
+                                    <constraint firstAttribute="height" constant="35" id="R6c-PI-FD4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="26"/>
+                                <color key="textColor" red="0.97812938689999995" green="0.89030045270000002" blue="0.31347513199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imW-A8-Vt3">
+                                <rect key="frame" x="112" y="178.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="81S-zL-PPj"/>
+                                    <constraint firstAttribute="width" constant="150" id="SEo-sW-D8k"/>
+                                </constraints>
+                                <state key="normal" image="imperial"/>
+                                <connections>
+                                    <action selector="imperialButtonTapped:" destination="XtL-ue-j9W" eventType="touchUpInside" id="n5m-yg-2zo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAP-aN-SPK">
+                                <rect key="frame" x="112" y="374" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="LDc-7s-IWd"/>
+                                    <constraint firstAttribute="width" constant="150" id="XwS-vX-1Jv"/>
+                                </constraints>
+                                <state key="normal" image="rebel"/>
+                                <connections>
+                                    <action selector="rebelButtonTapped:" destination="XtL-ue-j9W" eventType="touchUpInside" id="fnF-zW-KyA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="imW-A8-Vt3" firstAttribute="centerY" secondItem="CTl-je-TtQ" secondAttribute="centerY" constant="-80" id="42p-jX-Rkl"/>
+                            <constraint firstItem="imW-A8-Vt3" firstAttribute="centerX" secondItem="CTl-je-TtQ" secondAttribute="centerX" id="Lxj-Eb-T3r"/>
+                            <constraint firstItem="IAP-aN-SPK" firstAttribute="centerX" secondItem="CTl-je-TtQ" secondAttribute="centerX" id="ONJ-Rl-DSm"/>
+                            <constraint firstItem="IAP-aN-SPK" firstAttribute="top" secondItem="imW-A8-Vt3" secondAttribute="bottom" constant="45.5" id="TQL-ja-WCf"/>
+                            <constraint firstItem="wFt-Bv-Mil" firstAttribute="centerX" secondItem="CTl-je-TtQ" secondAttribute="centerX" id="a47-ds-Kdm"/>
+                            <constraint firstItem="wFt-Bv-Mil" firstAttribute="top" secondItem="3fp-au-dlL" secondAttribute="bottom" constant="30" id="ifR-27-vCJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1l-em-we8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="818" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="imperial" width="150" height="150"/>
+        <image name="logo" width="1000" height="427"/>
+        <image name="rebel" width="512" height="512"/>
+    </resources>
+</document>
